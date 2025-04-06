@@ -1,0 +1,82 @@
+@use '../../../shared/assets/styles/abstracts/mixins' as *;
+.login-module {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  @include Flex();
+  @media only screen and (max-width: 475px) {
+    .login-card-container {
+      width: 85%;
+    }
+  }
+  &__card {
+    @include Flex(column, space-between, center);
+    padding: 2rem;
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 1rem;
+    &__title {
+      font-size: 2.5rem;
+      color: #FFFFFF;
+    }
+  }
+  img {
+    width: 2rem;
+    height: 2rem;
+    top: 8.6px;
+    left: 17.19px;
+    border-radius: 12.9px;
+    
+  }
+  .text{
+    width: 280.1965637207031;
+    height: 41.279998779296875;
+    top: -0.82px;
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 13.8px;
+    line-height: 20.64px;
+    letter-spacing: 0.34px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+  }
+  .loginText{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 13.8px;
+    line-height: 13.76px;
+    letter-spacing: 0.34px;
+    vertical-align: middle;
+    color: #FFFFFF;
+
+  }
+  .github-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 12px;
+    background: linear-gradient(84deg, #000000 0%, rgba(203, 203, 203, 0.267755) 99.98%, rgba(255, 255, 255, 0.08) 99.99%, #000000 100%);
+    box-shadow: 0px 0px 8px 0px #FFFFFF5D;
+    color: #FFFFFF;
+    width: 204;
+    height: 42;
+    top: 420.42px;
+    left: 112.72px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    
+  }
+  .github-btn:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  }
+}
