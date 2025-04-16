@@ -4,7 +4,8 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 40px 0;
- animation: enter 0.5s ease-in-out;
+  animation: enter 0.5s ease-in-out;
+  
   .box {
     position: relative;
     width: 16.5rem;
@@ -141,4 +142,45 @@
   transition: 0.5s;
   z-index: 1;
   color: #fff;
+}
+.content{
+  box-shadow: 0px 5px 15px 0px #0000001A;
+  width: 252px;
+  height: 107px;
+  border-radius: 8px;
+}
+.repositories-container__card__visibility{
+  width: 75px;
+  height: 24px;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  padding: 5px 12px;
+  border-radius: 17.2px;
+  background: linear-gradient(90deg, #000000 45%, #5D29E3 100%);
+}
+.cardskew-title{
+  color: #FFFFFF;
+  width: 164.49746704101562px;
+  height: 25.799999237060547px;
+  position: absolute;
+  bottom: 65px;
+  left: 89px;
+  max-width: calc(100% - 1rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.repositories-container__card__visibility>p{
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 13.8px;
+  line-height: 20.64px;
+  letter-spacing: 0.34px;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

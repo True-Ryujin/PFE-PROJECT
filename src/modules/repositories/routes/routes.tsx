@@ -4,6 +4,7 @@ import { Fragment, lazy } from 'react'
 import { RouteProps } from 'react-router-dom'
 import AuthGuard from '@src/modules/shared/guards/AuthGuard'
 import { PATH } from '@src/modules/shared/routes/paths'
+import MainLayout from '@src/modules/shared/layout/MainLayout/MainLayout'
 
 
 type RouteConfig = {
@@ -19,8 +20,8 @@ const routes: RouteConfig[] = [
     exact: true,
     guard: AuthGuard,
     path: PATH.REPOSITORIES,
-    component: lazy(() => import('../index')),
-    layout: (props:any)=> <UniverseWrapper {...props}/>,
+    component: lazy(() => import('../repositories')),
+    layout:MainLayout
   },
 ]
 

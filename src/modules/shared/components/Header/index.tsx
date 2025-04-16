@@ -9,7 +9,6 @@ export default function Header() {
   async function signOut() {
     dispatch(logout())
   }
-
   return (
     <>
       <div className="header__sign-out">
