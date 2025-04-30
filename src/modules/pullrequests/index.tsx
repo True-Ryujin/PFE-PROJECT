@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom'
 import { PATH } from '../shared/routes/paths'
 import LoadingScreen from '../shared/components/Loading'
 import Empty from "../shared/components/NoData/index"
+import { useNavigate } from "react-router-dom"
 
 export interface IPullRequest{
   id:number,
@@ -17,11 +18,16 @@ export interface IPullRequest{
   created_at:string,
   updated_at:string,
   state:string,
+  node_id:string,
 }
 const PullRequest = () => {
+  const navigate=useNavigate()
   const {repoid}=useParams()
-  const { user } = useAppSelector((state) => state.auth);
-  const userName = user?.user_metadata?.user_name;
+  const { user } = useAppSelector((state) => state.auth)
+  const userName = user?.user_metadata?.user_name
+
+  
+
   const { data: pulls, isLoading: pullsLoading } =useQuery({
       queryFn: () => fetchPulls(userName, repoid!),
       queryKey: ["pulls", userName],
@@ -40,7 +46,7 @@ const PullRequest = () => {
       items={pullRequests?.map((pull: IPullRequest) => ({
         key: `${pull.id}`,
         label: <OnePullRequest pulls={pull} />,
-        children: <Commits pullIndex={pull.number} />,
+        children: <Commits pullIndex={pull.number} onClick={(sha) => navigate(PATH.FILECHANGES.replace(":repoid", repoid!).replace(":nodeid", pull.node_id),{state: {commitSha: sha}})}/>
       }))}
     />
   )}
@@ -51,5 +57,4 @@ const PullRequest = () => {
     
   )
 }
-
 export default PullRequest

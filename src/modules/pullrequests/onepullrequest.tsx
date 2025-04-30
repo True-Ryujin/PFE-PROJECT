@@ -12,7 +12,7 @@ const OnePullRequest: React.FC<any> = ({ pulls })=>{
         <div className='pull-container'>
             <div className='left-section'>
                 <div className='merge-icon'>
-                    <p className='ant-collapse-header-text'>Merge branch octa into hotfixs<Merge/></p>
+                    <p className='ant-collapse-header-text'>Merge branch {pulls.title} into {pulls.base.ref}<Merge/></p>
                     
                 </div>
                 <p className='ant-collapse-header-text create'>Created at : {pulls.created_at}</p>

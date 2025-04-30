@@ -4,5 +4,6 @@ export const PATH = {
   REGISTER: '/register',
   HOME: '/home',
   REPOSITORIES: '/repositories',
-  PULLREQUEST:'/repositories/:repoid'
+  PULLREQUEST:'/repositories/:repoid',
+  FILECHANGES:'/repositories/:repoid/:nodeid'
 }
