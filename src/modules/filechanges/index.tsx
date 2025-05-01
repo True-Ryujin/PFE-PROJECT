@@ -32,9 +32,14 @@ const Index = () => {
   const diffString = details?.diffString || ''
   
   
-  function parseDiffToArray(diffString: string): string[] {
-    if (!diffString) return [];
-    return diffString.split(/diff --git/).filter(Boolean).map(diff => `diff --git${diff}`);
+  const parseDiffToArray = (diffString:string) => {
+    if (!diffString) return ""
+    
+    // Split on the diff header but keep the header with each file
+    const parts = diffString.split(/(?=diff --git)/);
+    
+    // Filter out any empty strings
+    return parts.filter(part => part.trim().length > 0);
   }
   const handleFileSelect = (index: number) => {
     setSelectedFileIndex(index)
