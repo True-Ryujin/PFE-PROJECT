@@ -6,6 +6,7 @@
   background-repeat: repeat;
   animation: animateBg infinite ease-in-out;
   animation-duration: 120s;
+  overflow-y: scroll;
 }
 @keyframes animateBg {
   0% {

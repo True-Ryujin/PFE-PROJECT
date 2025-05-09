@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import UniverseWrapper from '@src/modules/shared/layout/UniverseWrapper/index'
 import { Fragment, lazy } from 'react'
 import { RouteProps } from 'react-router-dom'
 import AuthGuard from '@src/modules/shared/guards/AuthGuard'
@@ -19,8 +17,8 @@ const routes: RouteConfig[] = [
   {
     exact: true,
     guard: AuthGuard,
-    path: PATH.REPOSITORIES,
-    component: lazy(() => import('../repositories')),
+    path: PATH.FILECHANGES,
+    component: lazy(() => import('../index')),
     layout:MainLayout
   },
 ]

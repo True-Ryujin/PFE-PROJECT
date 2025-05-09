@@ -1,0 +1,54 @@
+.pull-container{
+    display: flex;
+    align-items: center;
+
+    span{
+        font-family: Nunito;
+        font-weight: 600;
+        font-size: 13.8px;
+        line-height: 20.64px;
+        letter-spacing: 0.34px;
+        vertical-align: middle;
+        text-transform: capitalize;
+        color: #008000;
+    }
+    img{
+        width: 2rem;
+        border-radius: 100%;
+    }
+    .left-section{
+        width: 50%;
+    }
+    .section{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 5%;
+    }
+    .update{
+        display: flex;
+        justify-content: right;
+        font-family: Nunito;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18.06px;
+        letter-spacing: 0.3px;
+        vertical-align: middle;
+        color: #C8C7C7;
+    }
+    .create{
+        font-family: Nunito;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18.06px;
+        letter-spacing: 0.3px;
+        vertical-align: middle;
+        color: #C8C7C7;
+
+    }
+    .right-section {
+        width: 50%;
+        left: 70rem;
+    }
+}

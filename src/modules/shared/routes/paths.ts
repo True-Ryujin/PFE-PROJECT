@@ -3,5 +3,7 @@ export const PATH = {
   LOGIN: '/login',
   REGISTER: '/register',
   HOME: '/home',
-  REPOSITORIES: '/repositories'
+  REPOSITORIES: '/repositories',
+  PULLREQUEST:'/repositories/:repoid',
+  FILECHANGES:'/repositories/:repoid/:nodeid'
 }

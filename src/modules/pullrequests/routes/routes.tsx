@@ -19,8 +19,8 @@ const routes: RouteConfig[] = [
   {
     exact: true,
     guard: AuthGuard,
-    path: PATH.REPOSITORIES,
-    component: lazy(() => import('../repositories')),
+    path: PATH.PULLREQUEST,
+    component: lazy(() => import('../index')),
     layout:MainLayout
   },
 ]

@@ -9,6 +9,7 @@ const Login = () => {
     await supabase.auth.signInWithOAuth({
       provider:'github',
       options: {
+        scopes: 'read:user repo',
         redirectTo: `${window.location.origin}${PATH.LOGIN}`,
       },
     })
